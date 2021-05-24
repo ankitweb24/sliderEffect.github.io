@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider image</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="header_set">
+        <div class="box">
+            <div class="container">
+                <img  src="images/image (2).jpg" alt="">
+                <div class="caption">
+                    <h2>Frist slide</h2>
+                    <p>excellent code with aj</p>
+                </div>
+            </div>
+            <div class="container">
+                <img  src="images/image (1).jpg" alt="">
+                <div class="caption">
+                    <h2>Second slide</h2>
+                    <p>excellent code with aj</p>
+                </div>
+            </div>
+            <div class="container">
+                <img  src="images/image (3).jpg" alt="">
+                <div class="caption">
+                    <h2>Third slide</h2>
+                    <p>excellent code with aj</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button  class="ctrl"  onclick="controlFunction(-1)" ><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></button>
+                <button  class="ctrl"  onclick="controlFunction(1)" ><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="indicator">
+                <span class="dot" onclick="currentElement(1)"></span>
+                <span class="dot" onclick="currentElement(2)"></span>
+                <span class="dot" onclick="currentElement(3)"></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

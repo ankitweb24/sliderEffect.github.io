@@ -1,0 +1,120 @@
+*{
+padding :0;
+margin:0;
+box-sizing:border-box;
+}
+
+.header_set{
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+    display: grid;
+    background:linear-gradient(to right,blue,rgba(255, 0, 0, 0.445));
+}
+.box{
+    width: 60%;
+    height:60%;
+    /* box-shadow: 0 0 10px rgb(0,0,0,.3); */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.controls{
+    z-index: 1;
+    position: absolute;
+    width: 100%;height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls button{
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(0,0,0,.3);
+    background: linear-gradient(to right,rgba(184, 253, 255, 0.801),rgb(252, 252, 252));
+}
+
+.controls button i{
+    color: rgba(0, 0, 0, 0.466);
+}
+.indicator{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.indicator span{
+    position: relative;
+    width: 10%;
+    height: 15%;
+    margin: 0 10px;
+}
+.dot{
+    /* background: linear-gradient(to right,rgb(184, 253, 255),rgb(229, 235, 227)); */
+    background-color: rgb(0, 255, 242);
+}
+.active{
+    background-color: rgb(217, 255, 0);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+#fade{
+    animation:  anm .5s linear;
+}
+@keyframes anm {
+   from{
+       opacity: .6;
+   }
+   to{
+       opacity: 1;
+   }
+}
+.container img{
+    width: 100%;
+    height: 100%;
+}
+.container .caption{
+    bottom: 15%;
+    width: 30%;
+    padding: 10px;
+    right: 0;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: red; */
+    position: absolute;
+    color: #fff;
+    font-size: .9rem;
+    display: flex;justify-content: center;align-items: center;flex-direction: column;
+}
+.caption h2{
+    margin-bottom: 5px;
+}
+
+@media(max-width:768px) {
+    .box{
+        width: 90%;
+    }
+    .container .caption{
+        width: 50%;
+    }
+}
